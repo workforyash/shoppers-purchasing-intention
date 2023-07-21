@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h2>Online shoppers purchasing intention prediction</h2>
+    <form action="{{ url_for('predict')}}" method="post">
+        <label for="Pagevalues">Page Values:</label>
+        <input type="text" id="PageValues" name="PageValues" required><br><br>
+        <label for="ExitValues">Exit Rate:</label>
+        <input type="text" id="ExitValues" name="ExitValues"><br><br>
+        <label for="ProductRelated">Product Related:</label>
+        <input type="text" id="ProductRelated" name="ProductRelated"><br><br>
+        <label for="ProductRelated_Duration">Product Related Duration:</label>
+        <input type="text" id="ProductRelated_Duration" name="ProductRelated_Duration"><br><br>
+        <label for="BounceRates">Bounce Rates:</label>
+        <input type="text" id="BounceRates" name="BounceRates"><br><br>
+        <label for="VisitorType">Visitor Type:</label>
+        
+        <select name="VisitorType" id="VisitorType">
+            <option value="VisitorType_New_Visitor">VisitorType_New_Visitor</option>
+            <option value="VisitorType_Returning_Visitor">VisitorType_Returning_Visitor</option>
+            <option value="VisitorType_Other">VisitorType_Other</option>
+           
+        </select>
+
+        <label for="Month">Month:</label>
+        
+        <select name="Month" id="Month">
+            <option value="Month_Feb">Month_Feb </option>
+            <option value="Month_Mar">Month_Mar</option>
+            <option value="Month_May">Month_May</option>
+            <option value="Month_June">Month_June</option>
+            <option value="Month_Jul">Month_Jul</option>
+            <option value="Month_Aug">Month_Aug</option>
+            <option value="Month_Sep">Month_Sep</option>
+            <option value="Month_Oct">Month_Oct</option>
+            <option value="Month_Nov">Month_Nov</option>
+            <option value="Month_Dec">Month_Dec</option>
+          
+        </select>
+      <br>
+      <br>
+        <input type="submit" value="Submit">
+        
+    </form>
+    <h2>
+        {{result}}
+     </h2>
+</body>
+</html>
